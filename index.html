@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MΛDHAT's Gambit — Data Room · Conviction Markets · Card Economy · Founder's Golden Ticket</title>
+<meta name="description" content="Economic Entertainment Engine & Satirical Prediction-Conviction Marketplace — Price the Culture. Predict the Scandal.">
+<link rel="canonical" href="https://maddegen.github.io/MADHATs-Gambit-Presentation/">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg-primary:#0a0c14;--bg-card:rgba(14,17,28,.92);--bg-glass:rgba(14,17,28,.7);
+--brand-gold:#ffd700;--brand-gold-dim:rgba(255,215,0,.15);--brand-gold-glow:rgba(255,215,0,.3);
+--neon-cyan:#00f0ff;--neon-purple:#b44aff;--neon-green:#00ff88;--neon-red:#ff3366;
+--verdigris:#40e0d0;--verdigris-dim:rgba(64,224,208,.12);
+--text-primary:#e8e6e3;--text-secondary:#8a8f98;--text-muted:#555a63;
+--font-heading:'Orbitron',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-body:'Inter',sans-serif;
+--radius:8px;--radius-lg:16px;--gap-xs:4px;--gap-sm:8px;--gap-md:16px;--gap-lg:24px;--gap-xl:40px;--gap-2xl:64px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg-primary);color:var(--text-primary);font-family:var(--font-body);font-size:15px;line-height:1.65}
+body{overflow-x:hidden;background:var(--bg-primary)}
+::selection{background:var(--brand-gold);color:#000}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--brand-gold-dim);border-radius:3px}
+
+/* ═══ NAV ═══ */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:12px 32px;background:rgba(10,12,20,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--brand-gold-dim)}
+.nav-brand{font-family:var(--font-heading);font-size:.82rem;font-weight:800;color:var(--brand-gold);letter-spacing:.08em;cursor:pointer}
+.nav-links{display:flex;gap:6px;align-items:center}
+.nav-links a{font-family:var(--font-mono);font-size:.62rem;color:var(--text-secondary);text-decoration:none;padding:6px 12px;border-radius:var(--radius);transition:all .2s;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--brand-gold);background:var(--brand-gold-dim)}
+.nav-cta{display:flex;gap:8px}
+.nav-cta button{font-family:var(--font-mono);font-size:.6rem;padding:7px 14px;border-radius:var(--radius);border:1px solid var(--brand-gold-dim);background:transparent;color:var(--brand-gold);cursor:pointer;transition:all .2s;letter-spacing:.04em;text-transform:uppercase}
+.nav-cta button:hover{background:var(--brand-gold);color:#000}
+.nav-cta button.primary{background:var(--brand-gold);color:#000;border-color:var(--brand-gold);font-weight:700}
+.nav-cta button.primary:hover{background:#fff;border-color:#fff}
+
+/* ═══ HERO ═══ */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 32px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(255,215,0,.06) 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,rgba(0,240,255,.04) 0%,transparent 50%)}
+.hero-badge{font-family:var(--font-mono);font-size:.58rem;color:var(--neon-cyan);letter-spacing:.12em;text-transform:uppercase;margin-bottom:var(--gap-lg);opacity:.8}
+.hero h1{font-family:var(--font-heading);font-size:clamp(2rem,5vw,3.8rem);font-weight:900;color:var(--brand-gold);letter-spacing:.06em;margin-bottom:var(--gap-md);line-height:1.1}
+.hero h1 .accent{color:var(--neon-cyan)}
+.hero-sub{font-family:var(--font-body);font-size:clamp(.9rem,1.5vw,1.15rem);color:var(--text-secondary);max-width:680px;margin:0 auto var(--gap-xl);font-style:italic}
+.hero-tagline{font-family:var(--font-mono);font-size:.72rem;color:var(--verdigris);letter-spacing:.06em;margin-bottom:var(--gap-2xl)}
+.hero-stats{display:flex;gap:var(--gap-xl);flex-wrap:wrap;justify-content:center}
+.hero-stat{text-align:center}
+.hero-stat .val{font-family:var(--font-heading);font-size:1.4rem;font-weight:800;color:var(--brand-gold)}
+.hero-stat .label{font-family:var(--font-mono);font-size:.55rem;color:var(--text-muted);letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+
+/* ═══ SECTIONS ═══ */
+section{padding:var(--gap-2xl) 32px;max-width:1200px;margin:0 auto;position:relative}
+section::before{content:attr(data-section);position:absolute;top:40px;right:32px;font-family:var(--font-mono);font-size:.5rem;color:var(--text-muted);letter-spacing:.1em;text-transform:uppercase;opacity:.4}
+.section-header{margin-bottom:var(--gap-xl)}
+.section-header .chip{font-family:var(--font-mono);font-size:.55rem;color:var(--neon-cyan);letter-spacing:.1em;text-transform:uppercase;margin-bottom:var(--gap-sm)}
+.section-header h2{font-family:var(--font-heading);font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:800;color:var(--text-primary);letter-spacing:.04em}
+.section-header h2 .gold{color:var(--brand-gold)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--brand-gold-dim),transparent);margin:var(--gap-2xl) 0}
+
+/* ═══ GRID CARDS ═══ */
+.grid{display:grid;gap:var(--gap-lg)}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid-4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--bg-card);border:1px solid var(--brand-gold-dim);border-radius:var(--radius-lg);padding:var(--gap-lg);transition:all .3s;position:relative;overflow:hidden}
+.card:hover{border-color:var(--brand-gold-glow);transform:translateY(-2px)}
+.card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--brand-gold),var(--neon-cyan))}
+.card .icon{font-size:1.6rem;margin-bottom:var(--gap-md)}
+.card h3{font-family:var(--font-heading);font-size:.72rem;font-weight:700;color:var(--brand-gold);letter-spacing:.04em;margin-bottom:var(--gap-sm)}
+.card p{font-family:var(--font-mono);font-size:.65rem;color:var(--text-secondary);line-height:1.7}
+
+/* ═══ TABLE ═══ */
+.tbl-wrap{overflow-x:auto;margin:var(--gap-lg) 0}
+table{width:100%;border-collapse:collapse;font-family:var(--font-mono);font-size:.62rem}
+th{background:rgba(255,215,0,.08);color:var(--brand-gold);text-align:left;padding:10px 14px;border-bottom:1px solid var(--brand-gold-dim);letter-spacing:.04em;text-transform:uppercase;font-weight:600}
+td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--text-secondary)}
+tr:hover td{background:rgba(255,215,0,.03)}
+
+/* ═══ METRIC BAR ═══ */
+.metric-row{display:flex;align-items:center;gap:var(--gap-md);margin-bottom:var(--gap-md)}
+.metric-label{font-family:var(--font-mono);font-size:.6rem;color:var(--text-muted);min-width:140px;letter-spacing:.02em}
+.metric-bar{flex:1;height:6px;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden}
+.metric-fill{height:100%;border-radius:3px;transition:width 1s ease}
+.metric-val{font-family:var(--font-heading);font-size:.65rem;color:var(--brand-gold);min-width:60px;text-align:right}
+
+/* ═══ NFT CARD SHOWCASE ═══ */
+.nft-showcase{display:flex;gap:var(--gap-lg);justify-content:center;flex-wrap:wrap;margin:var(--gap-xl) 0}
+.nft-card{width:180px;background:linear-gradient(135deg,rgba(14,17,28,.95),rgba(25,28,40,.95));border:2px solid;border-radius:12px;padding:16px;text-align:center;transition:all .4s}
+.nft-card.common{border-color:rgba(150,150,150,.3)}.nft-card.common:hover{border-color:#aaa;box-shadow:0 0 20px rgba(150,150,150,.15)}
+.nft-card.rare{border-color:rgba(0,150,255,.3)}.nft-card.rare:hover{border-color:#0096ff;box-shadow:0 0 20px rgba(0,150,255,.15)}
+.nft-card.epic{border-color:rgba(180,74,255,.3)}.nft-card.epic:hover{border-color:var(--neon-purple);box-shadow:0 0 20px rgba(180,74,255,.15)}
+.nft-card.legendary{border-color:rgba(255,215,0,.3)}.nft-card.legendary:hover{border-color:var(--brand-gold);box-shadow:0 0 20px rgba(255,215,0,.15)}
+.nft-card.golden{border-color:rgba(255,215,0,.5);background:linear-gradient(135deg,rgba(40,35,15,.95),rgba(25,28,40,.95))}.nft-card.golden:hover{box-shadow:0 0 30px rgba(255,215,0,.25)}
+.nft-rarity{font-family:var(--font-mono);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.nft-art{width:100%;aspect-ratio:3/4;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;font-size:3rem}
+.nft-name{font-family:var(--font-heading);font-size:.6rem;font-weight:700;margin-bottom:4px}
+.nft-stats{font-family:var(--font-mono);font-size:.5rem;color:var(--text-muted)}
+
+/* ═══ DONUT ═══ */
+.donut-wrap{display:flex;align-items:center;gap:var(--gap-xl);flex-wrap:wrap;justify-content:center;margin:var(--gap-xl) 0}
+.donut-legend{display:flex;flex-direction:column;gap:var(--gap-sm)}
+.donut-item{display:flex;align-items:center;gap:var(--gap-sm)}
+.donut-dot{width:10px;height:10px;border-radius:2px}
+.donut-text{font-family:var(--font-mono);font-size:.6rem;color:var(--text-secondary)}
+
+/* ═══ GOLDEN TICKET ═══ */
+.golden-ticket{background:linear-gradient(135deg,rgba(50,42,10,.6),rgba(14,17,28,.9));border:2px solid var(--brand-gold);border-radius:var(--radius-lg);padding:var(--gap-xl);text-align:center;position:relative;overflow:hidden}
+.golden-ticket::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(255,215,0,.06),transparent 70%)}
+.golden-ticket h3{font-family:var(--font-heading);font-size:1.3rem;color:var(--brand-gold);margin-bottom:var(--gap-md)}
+.golden-ticket .price{font-family:var(--font-heading);font-size:2rem;font-weight:900;color:#fff;margin:var(--gap-md) 0}
+.golden-ticket .details{font-family:var(--font-mono);font-size:.65rem;color:var(--text-secondary);line-height:2}
+
+/* ═══ MODAL ═══ */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);overflow-y:auto;padding:40px 20px}
+.modal-overlay.active{display:flex;justify-content:center;align-items:flex-start}
+.modal{background:var(--bg-primary);border:1px solid var(--brand-gold-dim);border-radius:var(--radius-lg);max-width:960px;width:100%;max-height:85vh;overflow-y:auto;position:relative}
+.modal-header{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:rgba(10,12,20,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--brand-gold-dim)}
+.modal-header h2{font-family:var(--font-heading);font-size:.8rem;color:var(--brand-gold);letter-spacing:.06em}
+.modal-close{background:none;border:1px solid var(--brand-gold-dim);border-radius:var(--radius);padding:6px 12px;color:var(--text-secondary);cursor:pointer;font-family:var(--font-mono);font-size:.6rem;transition:all .2s}
+.modal-close:hover{color:var(--brand-gold);border-color:var(--brand-gold)}
+.modal-body{padding:24px}
+.modal-body h3{font-family:var(--font-heading);font-size:.75rem;color:var(--neon-cyan);margin:var(--gap-lg) 0 var(--gap-sm);letter-spacing:.04em}
+.modal-body p,.modal-body li{font-family:var(--font-mono);font-size:.62rem;color:var(--text-secondary);line-height:1.8}
+.modal-body ul{padding-left:20px}
+.modal-body table{margin:var(--gap-md) 0}
+
+/* ═══ FOOTER ═══ */
+footer{text-align:center;padding:var(--gap-xl) 32px;border-top:1px solid var(--brand-gold-dim)}
+footer p{font-family:var(--font-mono);font-size:.55rem;color:var(--text-muted);letter-spacing:.04em}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:768px){
+  nav{padding:10px 16px;flex-wrap:wrap;gap:8px}
+  .nav-links{display:none}
+  section{padding:var(--gap-xl) 16px}
+  .hero{padding:100px 16px 60px}
+  .hero-stats{gap:var(--gap-lg)}
+  .nft-showcase{gap:var(--gap-md)}
+  .nft-card{width:140px;padding:12px}
+}
+
+/* ═══ ANIMATIONS ═══ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .6s ease both}
+.delay-1{animation-delay:.1s}.delay-2{animation-delay:.2s}.delay-3{animation-delay:.3s}.delay-4{animation-delay:.4s}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav>
+  <div class="nav-brand" onclick="scrollTo_('hero')">MΛDHAT'S GAMBIT</div>
+  <div class="nav-links">
+    <a onclick="scrollTo_('data-room')">Data Room</a>
+    <a onclick="scrollTo_('conviction')">Conviction Markets</a>
+    <a onclick="scrollTo_('card-economy')">Card Economy</a>
+    <a onclick="scrollTo_('tokenomics')">Tokenomics</a>
+    <a onclick="scrollTo_('founders-ticket')">Golden Ticket</a>
+    <a onclick="scrollTo_('team')">Team</a>
+    <a onclick="scrollTo_('roadmap')">Roadmap</a>
+  </div>
+  <div class="nav-cta">
+    <button onclick="openModal('wpModal')">📋 Whitepaper</button>
+    <button class="primary" onclick="openModal('deckModal')">🎯 Deck</button>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-badge fade-up">Economic Entertainment Engine · Satirical Prediction-Conviction Marketplace</div>
+  <h1 class="fade-up delay-1">MΛDHAT'S <span class="accent">GAMBIT</span></h1>
+  <p class="hero-sub fade-up delay-2">"Predict the Degeneracy. Get the Gossip. Hedge Your Bet."</p>
+  <p class="hero-tagline fade-up delay-3">Price the Culture · Predict the Scandal · Own the Outcome</p>
+  <div class="hero-stats fade-up delay-4">
+    <div class="hero-stat"><div class="val">$2.9T</div><div class="label">Entertainment TAM</div></div>
+    <div class="hero-stat"><div class="val">888.88M</div><div class="label">$MADx Fixed Supply</div></div>
+    <div class="hero-stat"><div class="val">1.88%</div><div class="label">Platform Fee</div></div>
+    <div class="hero-stat"><div class="val">28%</div><div class="label">MAD Shield Recovery</div></div>
+    <div class="hero-stat"><div class="val">40%</div><div class="label">Creator Profit Share</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════ DATA ROOM ═══════════════ -->
+<section id="data-room" data-section="01 · Data Room">
+  <div class="section-header">
+    <div class="chip">Investor Intelligence</div>
+    <h2>The <span class="gold">Data Room</span></h2>
+  </div>
+  <div class="grid grid-3">
+    <div class="card"><div class="icon">📊</div><h3>Market Opportunity</h3><p>$2.9T entertainment economy · $30B+ prediction/skill gaming (25% CAGR) · $150B+ DeFi TVL · Polymarket processed $21.5B in 2025 on macro events alone. Entertainment markets are faster, more frequent, and untapped.</p></div>
+    <div class="card"><div class="icon">💰</div><h3>Revenue Model</h3><p>1.88% platform fee globally · 40% creator profit share on creator-made markets · MAD Shield premiums (2-4%) · Card minting, evolution burns, tournament fees · Y3 projection: $121.4M gross revenue at $2.25B monthly volume.</p></div>
+    <div class="card"><div class="icon">🛡️</div><h3>MAD Shield Solvency</h3><p>28.8% loss mitigation · Premium-funded (no token printing) · 1,000 Monte Carlo sims: Y1 +$1.8M net, Y3 +$49M net · Worst 5% still positive · GARCH(1,1) volatility pricing · Fully collateralized, non-dilutive.</p></div>
+    <div class="card"><div class="icon">📈</div><h3>36-Month Projections</h3><p>DAU: 31K → 750K · Monthly volume: $20M → $2.25B · Gross revenue: $9.6M → $121.4M · EBITDA: $2.5M → $68M · D30 retention target: 70% · Shield adoption: 28.8%.</p></div>
+    <div class="card"><div class="icon">🔗</div><h3>On-Chain Architecture</h3><p>Dual-chain: Arbitrum Nova (gameplay) + Arbitrum One (liquidity/treasury) · DL-LMSR bonding curves for instant liquidity · Triple-Threat Oracle (Chainlink + News APIs + 66% Community Supermajority) · Modular, upgradeable, auditable.</p></div>
+    <div class="card"><div class="icon">🎯</div><h3>Seed Ask</h3><p>$1M-$2M seed · $12M pre-money valuation · SAFE/Equity · Use of funds: 40% engineering, 25% growth, 20% liquidity, 15% operations · 3x founder, 14+ yrs startup experience, 1 exit.</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════ CONVICTION MARKETS ═══════════════ -->
+<section id="conviction" data-section="02 · Conviction Markets">
+  <div class="section-header">
+    <div class="chip">Core Mechanics</div>
+    <h2><span class="gold">Conviction</span> Markets</h2>
+  </div>
+  <p style="font-family:var(--font-mono);font-size:.7rem;color:var(--text-secondary);max-width:800px;margin-bottom:var(--gap-xl);line-height:1.8">
+    MΛDHAT's Gambit transforms cultural moments into structured, tradable conviction markets. Users predict real-world entertainment outcomes — celebrity apologies, viral moments, scandals — packaged as satirical NFT cards with Pixar-meets-MAD-Magazine energy.
+  </p>
+  <div class="grid grid-2">
+    <div class="card"><div class="icon">🔄</div><h3>Core Loop</h3><p>Mint → Stake → Shield → Resolution → Social → Progression. Each cycle generates yield, evolves cards, resolves predictions via Triple-Threat Oracle, and unlocks new narrative chapters in The Great Unraveling saga.</p></div>
+    <div class="card"><div class="icon">⚡</div><h3>DL-LMSR Liquidity</h3><p>Dynamic Liquidity Logarithmic Market Scoring Rule guarantees instant liquidity for every market. No order books, no external market makers. Price = e^(qi/b) / Σe^(qj/b). Liquidity parameter adjusts dynamically with volume.</p></div>
+    <div class="card"><div class="icon">🔮</div><h3>Triple-Threat Oracle</h3><p>Layer 1: Chainlink (primary, cryptographic) · Layer 2: News API aggregation (redundancy) · Layer 3: Community Supermajority 66% (disputes only) · 48hr dispute window · Commit-reveal scheme prevents sniping.</p></div>
+    <div class="card"><div class="icon">🤖</div><h3>Scandal Scraper AI</h3><p>NLP engine monitors X, TikTok, YouTube, news for viral velocity (>10k mentions/hr). Auto-proposes new cards and markets. Infinite card expansion tied to cultural velocity. Cultural-oracle data moat for AI agent training.</p></div>
+  </div>
+  <div style="margin-top:var(--gap-xl)">
+    <h3 style="font-family:var(--font-heading);font-size:.75rem;color:var(--neon-cyan);margin-bottom:var(--gap-md)">Game Modes</h3>
+    <div class="grid grid-3">
+      <div class="card"><h3>Story Sagas</h3><p>Multi-stage narrative arcs. Predict outcomes across chapters of The Great Unraveling — from Petty Peccadillos to Apocalypse Auction.</p></div>
+      <div class="card"><h3>AI-Agent Arena</h3><p>Compete against predictive agents trained on cultural data. Tiered subscriptions, strategy benchmarking, agent slashing for manipulation.</p></div>
+      <div class="card"><h3>Card Battles</h3><p>Head-to-head matchups. Pit cards against rivals based on Volatility, Clout, and Mining Power. Clan (DAO) wars with real stakes.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════ CARD ECONOMY ═══════════════ -->
+<section id="card-economy" data-section="03 · Card Economy">
+  <div class="section-header">
+    <div class="chip">NFT Card System</div>
+    <h2>The <span class="gold">Card Economy</span></h2>
+  </div>
+  <p style="font-family:var(--font-mono);font-size:.7rem;color:var(--text-secondary);max-width:800px;margin-bottom:var(--gap-lg);line-height:1.8">
+    Cards are yield-bearing utility assets with dynamic metadata. Each satirical caricature represents a cultural figure with three core attributes: Volatility, Mining Power, and Clout — all evolving based on real-world outcomes.
+  </p>
+  
+  <div class="nft-showcase">
+    <div class="nft-card common"><div class="nft-rarity" style="color:#aaa">Common · 60%</div><div class="nft-art" style="background:rgba(150,150,150,.08)">🃏</div><div class="nft-name" style="color:#ccc">The Gawker</div><div class="nft-stats">Yield: 1.0× · APY: 8%</div></div>
+    <div class="nft-card rare"><div class="nft-rarity" style="color:#0096ff">Rare · 10%</div><div class="nft-art" style="background:rgba(0,150,255,.08)">🎭</div><div class="nft-name" style="color:#0096ff">Scandal Sheet</div><div class="nft-stats">Yield: 1.25× · APY: 13%</div></div>
+    <div class="nft-card epic"><div class="nft-rarity" style="color:var(--neon-purple)">Epic · 4%</div><div class="nft-art" style="background:rgba(180,74,255,.08)">👑</div><div class="nft-name" style="color:var(--neon-purple)">Mad Editor</div><div class="nft-stats">Yield: 1.5× · APY: 20%</div></div>
+    <div class="nft-card legendary"><div class="nft-rarity" style="color:var(--brand-gold)">Legendary · 1%</div><div class="nft-art" style="background:rgba(255,215,0,.08)">🏆</div><div class="nft-name" style="color:var(--brand-gold)">The Provocateur</div><div class="nft-stats">Yield: 2.0× · APY: 28%</div></div>
+    <div class="nft-card golden"><div class="nft-rarity" style="color:var(--brand-gold)">Golden Hand · <1%</div><div class="nft-art" style="background:rgba(255,215,0,.12)">✨</div><div class="nft-name" style="color:var(--brand-gold)">Golden Hand</div><div class="nft-stats">Yield: 3.0× · APY: 68% cap</div></div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>Rarity</th><th>Distribution</th><th>Yield Multiplier</th><th>Staking APY</th><th>Evolution</th></tr>
+      <tr><td>Common</td><td>60%</td><td>1.0×</td><td>8%</td><td>Winners gain Golden Aura + yield boost</td></tr>
+      <tr><td>Uncommon</td><td>25%</td><td>1.1×</td><td>10%</td><td>Attribute growth on correct predictions</td></tr>
+      <tr><td>Rare</td><td>10%</td><td>1.25×</td><td>13%</td><td>Clout + Mining Power increase</td></tr>
+      <tr><td>Epic</td><td>4%</td><td>1.5×</td><td>20%</td><td>Saga progression unlocks</td></tr>
+      <tr><td>Legendary</td><td>1%</td><td>2.0×</td><td>28%</td><td>Golden Aura + max boost</td></tr>
+      <tr><td>Golden Hand</td><td>Ultra-rare</td><td>3.0×</td><td>68% (cap)</td><td>Permanent elite status</td></tr>
+    </table>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════ TOKENOMICS ═══════════════ -->
+<section id="tokenomics" data-section="04 · Tokenomics">
+  <div class="section-header">
+    <div class="chip">$MADx Token</div>
+    <h2><span class="gold">Tokenomics</span> Engine</h2>
+  </div>
+
+  <div style="text-align:center;margin-bottom:var(--gap-xl)">
+    <div style="font-family:var(--font-heading);font-size:2rem;font-weight:900;color:var(--brand-gold)">888,888,888</div>
+    <div style="font-family:var(--font-mono);font-size:.65rem;color:var(--text-muted);letter-spacing:.08em">FIXED SUPPLY · DEFLATIONARY · NO INFLATION · NO DILUTION</div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>Category</th><th>%</th><th>Tokens</th><th>Cliff</th><th>Vesting</th></tr>
+      <tr><td>Community & Gameplay</td><td>45%</td><td>400,000,000</td><td>0 mo</td><td>60 months</td></tr>
+      <tr><td>DAO Treasury</td><td>15%</td><td>133,333,333</td><td>6 mo</td><td>36 months</td></tr>
+      <tr><td>Liquidity</td><td>15%</td><td>133,333,333</td><td>0 mo</td><td>48 months</td></tr>
+      <tr><td>Team & Advisors</td><td>15%</td><td>133,333,333</td><td>12 mo</td><td>36 months</td></tr>
+      <tr><td>Seed & Private</td><td>10%</td><td>88,888,888</td><td>6 mo</td><td>24 months</td></tr>
+    </table>
+  </div>
+
+  <h3 style="font-family:var(--font-heading);font-size:.75rem;color:var(--neon-cyan);margin:var(--gap-xl) 0 var(--gap-md)">Deflationary Sinks</h3>
+  <div class="grid grid-3">
+    <div class="card"><h3>10% Revenue Burn</h3><p>Platform revenue buys and burns $MADx. More activity = more burns = more scarcity.</p></div>
+    <div class="card"><h3>Evolution Burns</h3><p>Card evolution and Affliction cures require $MADx spend. Tokens permanently removed.</p></div>
+    <div class="card"><h3>Tournament Fees</h3><p>High-stakes entry fees partially burned. Oracle override votes require $MADx spend.</p></div>
+  </div>
+
+  <h3 style="font-family:var(--font-heading);font-size:.75rem;color:var(--neon-cyan);margin:var(--gap-xl) 0 var(--gap-md)">Revenue Distribution (Per $100M Volume)</h3>
+  <div class="metric-row"><div class="metric-label">Total Fees (1.88%)</div><div class="metric-bar"><div class="metric-fill" style="width:100%;background:var(--brand-gold)"></div></div><div class="metric-val">$1.88M</div></div>
+  <div class="metric-row"><div class="metric-label">Creator Share (40%)</div><div class="metric-bar"><div class="metric-fill" style="width:40%;background:var(--neon-cyan)"></div></div><div class="metric-val">$752K</div></div>
+  <div class="metric-row"><div class="metric-label">Operations (35%)</div><div class="metric-bar"><div class="metric-fill" style="width:24%;background:var(--neon-purple)"></div></div><div class="metric-val">$395K</div></div>
+  <div class="metric-row"><div class="metric-label">MAD Shield (25%)</div><div class="metric-bar"><div class="metric-fill" style="width:15%;background:var(--neon-green)"></div></div><div class="metric-val">$282K</div></div>
+  <div class="metric-row"><div class="metric-label">Token Burn (10%)</div><div class="metric-bar"><div class="metric-fill" style="width:6%;background:var(--neon-red)"></div></div><div class="metric-val">$113K</div></div>
+  <div class="metric-row"><div class="metric-label">Community (30%)</div><div class="metric-bar"><div class="metric-fill" style="width:18%;background:var(--verdigris)"></div></div><div class="metric-val">$338K</div></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════ COMPETITIVE ═══════════════ -->
+<section id="competitive" data-section="05 · Competitive Landscape">
+  <div class="section-header">
+    <div class="chip">Category Creator</div>
+    <h2>Why We <span class="gold">Win</span></h2>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>Feature</th><th>MΛDHAT's Gambit</th><th>Polymarket</th><th>Kalshi</th><th>DraftKings</th></tr>
+      <tr><td>Creator Profit Share</td><td style="color:var(--neon-green)">40% lifetime ✓</td><td style="color:var(--neon-red)">None</td><td style="color:var(--neon-red)">None</td><td style="color:var(--neon-red)">None</td></tr>
+      <tr><td>Loss Mitigation</td><td style="color:var(--neon-green)">28.8% Shield ✓</td><td style="color:var(--neon-red)">None</td><td style="color:var(--neon-red)">None</td><td style="color:var(--text-muted)">Limited</td></tr>
+      <tr><td>Entertainment Markets</td><td style="color:var(--neon-green)">Native ✓</td><td style="color:var(--neon-red)">Macro only</td><td style="color:var(--neon-red)">Macro only</td><td style="color:var(--text-muted)">Sports</td></tr>
+      <tr><td>NFT Card Economy</td><td style="color:var(--neon-green)">Full ✓</td><td style="color:var(--neon-red)">None</td><td style="color:var(--neon-red)">None</td><td style="color:var(--neon-red)">None</td></tr>
+      <tr><td>Instant Liquidity</td><td style="color:var(--neon-green)">DL-LMSR ✓</td><td style="color:var(--text-muted)">Order book</td><td style="color:var(--text-muted)">Order book</td><td style="color:var(--text-muted)">House</td></tr>
+      <tr><td>AI Market Creation</td><td style="color:var(--neon-green)">Scandal Scraper ✓</td><td style="color:var(--neon-red)">Manual</td><td style="color:var(--neon-red)">Manual</td><td style="color:var(--neon-red)">Manual</td></tr>
+      <tr><td>On-Chain Transparent</td><td style="color:var(--neon-green)">Full ✓</td><td style="color:var(--neon-green)">Partial</td><td style="color:var(--neon-red)">No</td><td style="color:var(--neon-red)">No</td></tr>
+    </table>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════ FOUNDER'S GOLDEN TICKET ═══════════════ -->
+<section id="founders-ticket" data-section="06 · Golden Ticket">
+  <div class="section-header">
+    <div class="chip">Genesis Access</div>
+    <h2>Founder's <span class="gold">Golden Ticket</span></h2>
+  </div>
+  <div class="golden-ticket">
+    <div style="font-family:var(--font-mono);font-size:.6rem;color:var(--neon-cyan);letter-spacing:.1em;margin-bottom:var(--gap-md)">GOLDEN GENESIS FOUNDERS NFT</div>
+    <h3>🎩 The FoundersNFT</h3>
+    <div class="price">.088 ETH</div>
+    <div style="font-family:var(--font-heading);font-size:.7rem;color:var(--text-secondary);margin-bottom:var(--gap-lg)">2,488 Units · ERC-1155</div>
+    <div class="details">
+      ✦ Lifetime fee discounts on all platform activity<br>
+      ✦ Priority access to all future card drops and Scandal Packs<br>
+      ✦ Boosted staking APY multipliers<br>
+      ✦ DAO governance voting power<br>
+      ✦ Exclusive Golden Hand card airdrops<br>
+      ✦ Early access to AI-Agent Arena<br>
+      ✦ Founding member recognition in The Great Unraveling narrative<br>
+      ✦ Revenue share from FoundersNFT secondary market royalties
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════ TEAM ═══════════════ -->
+<section id="team" data-section="07 · Team">
+  <div class="section-header">
+    <div class="chip">Execution-Ready</div>
+    <h2>The <span class="gold">Team</span></h2>
+  </div>
+  <div class="grid grid-3">
+    <div class="card"><div class="icon">🎩</div><h3>Nick McLeod — Founder & CEO</h3><p>3× founder, 14+ yrs startup exp, 1 exit · 6+ yrs Web3/AI/ML · Venture analyst background · Architect of tokenomics, game design, and GTM strategy · Product + math + culture intersection.</p></div>
+    <div class="card"><div class="icon">🤖</div><h3>Carlo F. Benedetto — Co-Founder & COO</h3><p>CEO at BatchLynx (AI Ops-as-a-Service) · 15+ yrs Web3 · Near Protocol audits · Architect of Scandal Scraper, Triple-Threat Oracle, and AI-driven risk engines · Operations + AI + oracles.</p></div>
+    <div class="card"><div class="icon">🎨</div><h3>Parphul B. — Frontend & Product Lead</h3><p>Former Polygon, DAO Lens, Crisper AI · 7+ yrs Web3 UX · 108+ components across 30+ pages · Satirical UX, card-based interfaces, prediction-market flows · End-to-end user experience.</p></div>
+  </div>
+  <h3 style="font-family:var(--font-heading);font-size:.7rem;color:var(--neon-cyan);margin:var(--gap-xl) 0 var(--gap-md)">Strategic Partners</h3>
+  <div class="grid grid-4">
+    <div class="card"><h3>INFI Multi-Chain</h3><p>Cross-chain infra, liquidity routing</p></div>
+    <div class="card"><h3>All Access Anonymous</h3><p>Satirical art direction, card worldbuilding</p></div>
+    <div class="card"><h3>Dverse / CodeCage</h3><p>Smart contracts, oracle integration</p></div>
+    <div class="card"><h3>Alpha Growth</h3><p>Creator onboarding, influencer funnels</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════ ROADMAP ═══════════════ -->
+<section id="roadmap" data-section="08 · Roadmap">
+  <div class="section-header">
+    <div class="chip">Execution Timeline</div>
+    <h2><span class="gold">Roadmap</span> 2026</h2>
+  </div>
+  <div class="grid grid-2">
+    <div class="card"><div class="icon">🚀</div><h3>Q2 2026 — Foundation</h3><p>Pre-launch beta · Golden Genesis FoundersNFT 2,488 (.088 ETH) · Golden Hand Casino early access · $MADx TGE prep · Creator onboarding · Scandal Scraper v1 · Cross-chain infra setup</p></div>
+    <div class="card"><div class="icon">⚡</div><h3>Q3 2026 — Launch</h3><p>Marketplace+ Phase 3 · $MADx Gov/GameFi launch · Quadratic Launchpad planning · Cross-chain bridge deployment · Casino + Marketplace quests + loyalty · RWA onboarding</p></div>
+    <div class="card"><div class="icon">🏗️</div><h3>Q4 2026 — Scale</h3><p>CrowdfundDAO launch · Quadratic MoonPad · AI governance tools (DAAO.ai) · BORGs + automation · MΛDforge MvPmaker Initiative · TON integration planning</p></div>
+    <div class="card"><div class="icon">🌍</div><h3>2027+ — Expansion</h3><p>Gold-backed stablecoin R&D · Full AI governance · Multi-chain prediction super-network · Enterprise cultural-oracle API · Metaverse integrations · Global creator ecosystem</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section style="text-align:center;padding:var(--gap-2xl) 32px">
+  <div style="font-family:var(--font-heading);font-size:1.4rem;font-weight:800;color:var(--brand-gold);margin-bottom:var(--gap-md)">Ready to Bet on Culture?</div>
+  <p style="font-family:var(--font-mono);font-size:.7rem;color:var(--text-secondary);margin-bottom:var(--gap-xl)">$1M-$2M Seed · $12M Pre-Money · SAFE/Equity</p>
+  <div style="display:flex;gap:var(--gap-md);justify-content:center;flex-wrap:wrap">
+    <a href="https://linktr.ee/MADGambit" target="_blank" style="font-family:var(--font-mono);font-size:.65rem;padding:12px 28px;background:var(--brand-gold);color:#000;border-radius:var(--radius);text-decoration:none;font-weight:700;letter-spacing:.04em">CONNECT WITH US</a>
+    <button onclick="openModal('wpModal')" style="font-family:var(--font-mono);font-size:.65rem;padding:12px 28px;background:transparent;color:var(--brand-gold);border:1px solid var(--brand-gold);border-radius:var(--radius);cursor:pointer;letter-spacing:.04em">READ WHITEPAPER</button>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <p>© 2026 MΛDHAT's Gambit · All Rights Reserved · <a href="https://linktr.ee/MADGambit" target="_blank" style="color:var(--brand-gold);text-decoration:none">linktr.ee/MADGambit</a></p>
+  <p style="margin-top:8px">Built with conviction. Powered by culture. Verified on-chain.</p>
+</footer>
+
+<!-- ═══════════════ WHITEPAPER MODAL ═══════════════ -->
+<div class="modal-overlay" id="wpModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>📋 MΛDHAT'S GAMBIT — Canonical Whitepaper 2026</h2>
+      <button class="modal-close" onclick="closeModal('wpModal')">✕ Close</button>
+    </div>
+    <div class="modal-body">
+      <h3>Executive Abstract</h3>
+      <p>MΛDHAT's Gambit introduces a new category: a culturally-native, entertainment-first prediction-conviction market where attention becomes signal, signal becomes price, and price becomes shared liquidity. Users predict real-world cultural outcomes packaged as satirical NFT cards.</p>
+      <p style="margin-top:12px"><strong style="color:var(--brand-gold)">Signature Mechanics:</strong> 40% Creator Profit Share · 28.8% MAD Shield Loss Mitigation · 1.88% Platform Fee · 888,888,888 $MADx Fixed Supply · Y3: 750K users, $2.25B monthly volume, $121.4M gross revenue, 70% D30 retention.</p>
+      
+      <h3>The Broken Promise of Online Communities</h3>
+      <p>Three systemic failures: (1) Extraction Over Alignment — platforms capture creator value. (2) Rug-Pull Culture — 2021-2024 crypto normalized exploitation. (3) The Boring Macro Problem — incumbents ignore entertainment attention economy.</p>
+      
+      <h3>The 3-Layer Defense (Moat)</h3>
+      <p><strong style="color:var(--neon-cyan)">Layer 1 — The Hook:</strong> Satirical NFT cards with Pixar/MAD Magazine energy. ChaosMeter, VRF near-miss dopamine, low barrier to entry.</p>
+      <p><strong style="color:var(--neon-cyan)">Layer 2 — The Engine:</strong> Scandal Scraper AI, 40% Creator Profit Share, DL-LMSR bonding curve liquidity.</p>
+      <p><strong style="color:var(--neon-cyan)">Layer 3 — The Shield:</strong> 28.8% loss mitigation, premium-funded, yield-supported, stress-tested via 1,000 Monte Carlo sims.</p>
+      
+      <h3>Token System ($MADx)</h3>
+      <p>Fixed supply: 888,888,888. Deflationary via revenue burn (10%), evolution burns, Affliction cures, tournament fees. Staking: 8% base APY, up to 68% cap (Golden Hand). Governance: quadratic voting, 100K $MADx proposal deposits.</p>
+      
+      <h3>Architecture</h3>
+      <p>Dual-chain: Arbitrum Nova (gameplay) + Arbitrum One (liquidity). Triple-Threat Oracle. Soft-close triggers at >500% volume spikes. Commit-reveal scheme. 48hr dispute window. Modular, upgradeable, multi-sig governance.</p>
+      
+      <h3>Financial Projections (36-Month)</h3>
+      <table>
+        <tr><th>Metric</th><th>Year 1</th><th>Year 2</th><th>Year 3</th></tr>
+        <tr><td>DAU</td><td>~150K</td><td>~350K</td><td>~750K</td></tr>
+        <tr><td>Monthly Volume</td><td>~$250M</td><td>~$1.25B</td><td>~$2.25B</td></tr>
+        <tr><td>Gross Revenue</td><td>~$9.6M</td><td>~$48M</td><td>~$121.4M</td></tr>
+        <tr><td>EBITDA</td><td>~$2.5M</td><td>~$22M</td><td>~$68M</td></tr>
+      </table>
+      
+      <p style="margin-top:var(--gap-lg);font-style:italic;color:var(--text-muted)">Full whitepaper available at linktr.ee/MADGambit</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ DECK MODAL ═══════════════ -->
+<div class="modal-overlay" id="deckModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>🎯 MΛDHAT'S GAMBIT — Investor Deck</h2>
+      <button class="modal-close" onclick="closeModal('deckModal')">✕ Close</button>
+    </div>
+    <div class="modal-body">
+      <h3>Slide 1: The Problem</h3>
+      <p>$2.9T entertainment economy has zero prediction infrastructure. Polymarket = macro only. Kalshi = regulated/slow. DraftKings = gambling/no creator share. Creators have no ownership. Users have no loss protection.</p>
+      
+      <h3>Slide 2: The Solution</h3>
+      <p>MΛDHAT's Gambit: Economic Entertainment Engine. Prediction + iGaming + Token Incentives + Creator Share = Closed-Loop Economy. Cultural velocity > macro velocity.</p>
+      
+      <h3>Slide 3: How It Works</h3>
+      <p>Mint satirical NFT cards → Predict cultural outcomes → Triple-Threat Oracle resolves → Cards evolve/degenerate → Creators earn 40% → MAD Shield protects 28.8% of losses.</p>
+      
+      <h3>Slide 4: Market Opportunity</h3>
+      <p>$2.9T entertainment · $30B prediction/skill gaming (25% CAGR) · $150B DeFi · Polymarket: $21.5B in 2025 on macro alone. Entertainment markets are 10x faster, more viral, untapped.</p>
+      
+      <h3>Slide 5: The Moat</h3>
+      <p>Hook (satirical cards, ChaosMeter) + Engine (Scandal Scraper AI, 40% creator share, DL-LMSR) + Shield (28.8%, premium-funded, Monte Carlo validated). Competitors structurally cannot replicate.</p>
+      
+      <h3>Slide 6: Revenue Model</h3>
+      <p>1.88% platform fee · 40% to creators on creator markets · MAD Shield premiums · Card minting/evolution · Tournament fees. Y3: $121.4M gross, $68M EBITDA.</p>
+      
+      <h3>Slide 7: Tokenomics</h3>
+      <p>888,888,888 $MADx fixed. 45% community, 15% treasury, 15% liquidity, 15% team (12mo cliff), 10% seed. Deflationary: 10% revenue burn + evolution burns + Affliction cures.</p>
+      
+      <h3>Slide 8: The Ask</h3>
+      <p>$1M-$2M seed · $12M pre-money · SAFE/Equity · 40% engineering, 25% growth, 20% liquidity, 15% ops. 3× founder, 14+ years, 1 exit.</p>
+      
+      <p style="margin-top:var(--gap-lg);font-style:italic;color:var(--text-muted)">Full deck available on request at linktr.ee/MADGambit</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
+<script>
+function scrollTo_(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'})}
+function openModal(id){document.getElementById(id).classList.add('active');document.body.style.overflow='hidden'}
+function closeModal(id){document.getElementById(id).classList.remove('active');document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.modal-overlay.active').forEach(m=>{m.classList.remove('active');document.body.style.overflow=''})}});
+document.querySelectorAll('.modal-overlay').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m){m.classList.remove('active');document.body.style.overflow=''}})});
+
+// Scroll spy for nav links
+const sections=['data-room','conviction','card-economy','tokenomics','competitive','founders-ticket','team','roadmap'];
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));const link=document.querySelector(`.nav-links a[onclick*="${e.target.id}"]`);if(link)link.classList.add('active')}})},{threshold:.3});
+sections.forEach(s=>{const el=document.getElementById(s);if(el)observer.observe(el)});
+</script>
+</body>
+</html>
