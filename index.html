@@ -5752,6 +5752,17 @@ body {
               <div class="slide-layer mg"><div class="slide-layer-title">Tier 3 — Community Vote (TERTIARY)</div><div class="slide-layer-body">Staked $MADx quadratic voting. 66% supermajority required. 48-hour dispute window. Flash loan protection: 7-day average staked balance used.</div></div>
             </div>
             <div class="slide-layer gr" style="margin-top:8px"><div class="slide-layer-title">Security Safeguards</div><div class="slide-layer-body">Soft-Close on &gt;500% volume spike. Commit-Reveal scheme prevents MEV/front-running. CertiK / Trail of Bits audit pre-mainnet. Contracts in scope: PredictionMarket.sol, BondingCurve.sol, EvolutionEngine.sol, RiskOracle.sol, StakingPool.sol</div></div>
+            <div style="margin-top:var(--gap-md);font-family:var(--font-heading);font-size:.75rem;color:var(--brand-gold);margin-bottom:8px;">SMART CONTRACT IMPLEMENTATION STATUS</div>
+            <table class="slide-table">
+              <thead><tr><th>Contract</th><th>Standard</th><th>Status</th><th>Security Pattern</th></tr></thead>
+              <tbody>
+                <tr><td class="accent">MADCard1155</td><td>ERC-1155</td><td style="color:var(--neon-green)">Built</td><td>AccessControl (role-gated mint/wear-oracle), Pausable, ReentrancyGuard</td></tr>
+                <tr><td class="accent">MADCard721</td><td>ERC-721</td><td style="color:var(--neon-green)">Built</td><td>Same pattern + hard-capped 1-of-1 supply enforcement (Mythic tier)</td></tr>
+                <tr><td class="accent">MADShieldVault</td><td>Custom</td><td style="color:var(--text-muted)">Designed, not yet built</td><td>Direct port of proven off-chain opt-in/opt-out logic (28.8%/40%/60% tiers)</td></tr>
+                <tr><td class="accent">MADStaking</td><td>Custom</td><td style="color:var(--text-muted)">Designed, not yet built</td><td>6-tier system, source-of-truth constants already finalized</td></tr>
+              </tbody>
+            </table>
+            <div style="font-family:var(--font-mono);font-size:.62rem;color:var(--text-muted);margin-top:6px;">Both built contracts use OpenZeppelin's audited base implementations, not custom crypto primitives. On-chain durability/wear tracking (2%–16% per rarity tier) is enforced at the contract level, not just in the frontend. Zero test coverage on either contract yet — Foundry test suite is the immediate next engineering priority before any testnet deployment. Toolchain: Foundry, targeting Arbitrum One.</div>
           </div>
         </div>
 
@@ -5927,9 +5938,27 @@ body {
           </div>
         </div>
 
-        <!-- SECTION 13 -->
+                <!-- SECTION 13 -->
         <div id="wp-13" class="wp-section">
           <div class="wp-sec-num">13</div>
+          <div class="wp-sec-title">Cap Table & Ownership Structure</div>
+          <div class="wp-sec-body">
+            <table class="slide-table">
+              <thead><tr><th>Holder</th><th>Unit Class</th><th>Equity %</th><th>Voting %</th><th>Terms</th></tr></thead>
+              <tbody>
+                <tr><td class="accent">Nicholas McLeod (Founder & CEO)</td><td>Class A</td><td style="color:var(--neon-cyan)">54.09%</td><td style="color:var(--brand-gold)">65.3%</td><td>Founder control retained</td></tr>
+                <tr><td class="accent">Core Contributors</td><td>Class B</td><td style="color:var(--neon-cyan)">32.00%</td><td>—</td><td>1-year vesting cliff</td></tr>
+                <tr><td class="accent">Community / DAO Custody</td><td>Class A</td><td style="color:var(--neon-cyan)">11.59%</td><td>Progressive</td><td>Transitions to DAO governance over time</td></tr>
+                <tr><td class="accent">Seed Round (this raise)</td><td>—</td><td style="color:var(--text-muted)">TBD by round size</td><td>—</td><td>$1.24M–$2.48M at $12M pre-money</td></tr>
+              </tbody>
+            </table>
+            <div style="font-family:var(--font-mono);font-size:.62rem;color:var(--text-muted);margin-top:6px;">Legal entity: MAD Gambit LLC. Manager-managed structure. Class A units carry founder + community voting rights; Class B (core contributor) units are non-voting, economic-only, subject to standard 1-year cliff vesting.</div>
+          </div>
+        </div>
+
+<!-- SECTION 14 -->
+        <div id="wp-14" class="wp-section">
+          <div class="wp-sec-num">14</div>
           <div class="wp-sec-title">Go-To-Market Strategy & Roadmap</div>
           <div class="wp-sec-body">
             <div class="slide-stat-row">
@@ -5951,8 +5980,8 @@ body {
         </div>
 
         <!-- SECTION 14 -->
-        <div id="wp-14" class="wp-section">
-          <div class="wp-sec-num">14</div>
+        <div id="wp-15" class="wp-section">
+          <div class="wp-sec-num">15</div>
           <div class="wp-sec-title">Appendices & Data Exports</div>
           <div class="wp-sec-body">
             <div style="font-family:var(--font-heading);font-size:.75rem;color:var(--brand-gold);margin-bottom:8px;">APPENDIX A — SCENARIO MULTIPLIERS</div>
